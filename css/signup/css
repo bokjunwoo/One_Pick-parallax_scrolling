@@ -1,0 +1,213 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Carter+One&family=DM+Serif+Display:ital@1&family=Noto+Sans+KR:wght@100;300;400;500&family=Nuosu+SIL&family=Oleo+Script+Swash+Caps&family=Rock+Salt&family=Sawarabi+Gothic&family=Shadows+Into+Light&family=Song+Myung&display=swap");
+/*font-family: 'Bodoni Moda', serif;
+font-family: 'Nanum Gothic Coding', monospace;
+//Bodoni Moda , Rock Salt,Nuosu SIL*/
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Nuosu SIL", sans-serif;
+  background: url("../img/HS/background.gif") no-repeat center/cover;
+}
+
+.main {
+  width: 350px;
+  height: 500px;
+  background: red;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(44, 44, 44, 0.3098039216), rgba(59, 59, 59, 0.3921568627), rgba(0, 0, 0, 0.6745098039));
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+
+#chk {
+  display: none;
+}
+
+.signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+input {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #3c3c3c;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5b5b5b;
+}
+
+.login {
+  height: 460px;
+  background: #eee;
+  border-radius: 60%/10%;
+  transform: translateY(-180px);
+  transition: 0.8s ease-in-out;
+}
+
+.login label {
+  color: #000;
+  transform: scale(0.6);
+}
+
+#chk:checked ~ .login {
+  transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+  transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(0.6);
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  z-index: 100;
+}
+.header:hover .header_logo {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header:hover .header_circle01, .header:hover .header_circle02 {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header:hover .header_menu {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header .header_logo {
+  font: 300 5vh/2 "Bodoni Moda";
+  position: absolute;
+  left: 7vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+}
+.header .header_circle01 {
+  font: 300 1.5vw/5 "Bodoni Moda";
+  position: absolute;
+  left: 47.2vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+  color: white;
+}
+.header .header_circle01 > a:visited {
+  color: white;
+}
+.header .header_circle02 {
+  font: 300 1.5vw/5 "Bodoni Moda";
+  position: absolute;
+  right: 47.2vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+  color: white;
+}
+.header .header_circle02 > a:visited {
+  color: white;
+}
+.header .header_menu {
+  font: 300 5vh/2 "Bodoni Moda";
+  position: absolute;
+  right: 7vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+}
+
+.header_opened {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  background: url("../img/HS/background.gif");
+  display: none;
+  color: #fff;
+  z-index: 100;
+}
+.header_opened .header_item01 {
+  width: 80vw;
+  margin: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_opened .header_item01 a {
+  margin-bottom: 10vh;
+  transition: all 0.4s;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.807);
+}
+.header_opened .header_item01 a:visited {
+  color: #fff;
+}
+.header_opened .header_item01 a:nth-of-type(1) {
+  font: 900 12vh/1 "Bodoni Moda";
+  letter-spacing: 3px;
+}
+.header_opened .header_item01 a:nth-of-type(2) {
+  font: 900 9vh/1 "Rock Salt";
+}
+.header_opened .header_item01 a:nth-of-type(3) {
+  font: 900 12vh/1 "Nuosu SIL";
+}
+.header_opened .header_item01 a:hover {
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=css.map */

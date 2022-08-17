@@ -1,0 +1,323 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Carter+One&family=DM+Serif+Display:ital@1&family=Noto+Sans+KR:wght@100;300;400;500&family=Nuosu+SIL&family=Oleo+Script+Swash+Caps&family=Rock+Salt&family=Sawarabi+Gothic&family=Shadows+Into+Light&family=Song+Myung&display=swap");
+/*font-family: 'Bodoni Moda', serif;
+font-family: 'Nanum Gothic Coding', monospace;
+//Bodoni Moda , Rock Salt,Nuosu SIL*/
+
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+body{
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+
+  .header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    z-index: 100;
+    color: #fff;
+  
+    &:hover {
+      .header_logo {
+        transform: translateY(0vh);
+        opacity: 1;
+      }
+      .header_circle01, .header_circle02 {
+        transform: translateY(0vh);
+        opacity: 1;
+      }
+      .header_menu {
+        transform: translateY(0vh);
+        opacity: 1;
+      }
+    }
+    
+    .header_logo {
+      font: 300 1.5vw/5 "Bodoni Moda";
+      position: absolute;
+      left: 7vw;
+      cursor: pointer;
+      transition: all 1s;
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+    .header_circle01{
+      font: 300 1.5vw/5 "Bodoni Moda";
+      position: absolute;
+      left: 47.2vw;
+      cursor: pointer;
+      transition: all 1s;
+      transform: translateY(-10vh);
+      opacity: 0;
+      color: white;
+      >a{
+        &:visited{
+          color: white;
+        }
+      }
+    }
+    .header_circle02{
+      font: 300 1.5vw/5 "Bodoni Moda";
+      position: absolute;
+      right: 47.2vw;
+      cursor: pointer;
+      transition: all 1s;
+      transform: translateY(-10vh);
+      opacity: 0;
+      color: white;
+      >a{
+        &:visited{
+          color: white;
+        }
+      }
+    }
+    .header_menu {
+      font: 300 1.5vw/5 "Bodoni Moda";
+      position: absolute;
+      right: 7vw;
+      cursor: pointer;
+      transition: all 1s;
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
+  .header_opened{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    background: url("../img/HS/background.gif");
+    display: none;
+    color: #fff;
+    z-index: 100;
+    .header_item01{
+      width: 80vw;
+      margin: 10vh 10vw;
+      // border: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a{
+        margin-bottom: 10vh;
+        transition: all .4s;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.807);
+        &:visited{
+          color: #fff;
+        }
+        &:nth-of-type(1){
+          font: 900 12vh/1 "Bodoni Moda";
+          letter-spacing: 3px;
+        }
+        &:nth-of-type(2){
+          font: 900 9vh/1 "Rock Salt";
+        }
+        &:nth-of-type(3){
+          font: 900 12vh/1 "Nuosu SIL";
+        }
+        &:hover{
+          letter-spacing: -1px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.cinema_bg{
+  width: 100vw;
+  height: 100vh;
+  background: url('../img/HS/cinema/bg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cinema_block01{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/blcok1.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -7.2vh;
+  left: 0;
+}
+.cinema_chair01{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/chair01.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cinema_block02{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/block2.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+}
+.cinema_chair02{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/chair02.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 14vh;
+  left: 0;
+}
+.cinema_block03{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/blcok3.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25vh;
+  left: 0;
+}
+.cinema_chair03{
+  width: 100vw;
+  height: 36vh;
+  background: url('../img/HS/cinema/chair03.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40vh;
+  left: 0;
+}
+
+.person01{
+  width: 24vw;
+  height: 52vh;
+  background: url('../img/HS/cinema/person01.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -0.5vh;
+  right: 16vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person02{
+  width: 24vw;
+  height: 52vh;
+  background: url('../img/HS/cinema/person02.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -0.9vh;
+  left: 17.4vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person03{
+  width: 24vw;
+  height: 52vh;
+  background: url('../img/HS/cinema/person03.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25.2vh;
+  left: -2.5vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person04{
+  width: 24vw;
+  height: 52vh;
+  background: url('../img/HS/cinema/person04.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25.2vh;
+  left: 38.5vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person05{
+  width: 22vw;
+  height: 42vh;
+  background: url('../img/HS/cinema/person05.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25.2vh;
+  right: -1.7vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person06{
+  width: 22vw;
+  height: 40vh;
+  background: url('../img/HS/cinema/person06.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 42.2vh;
+  left: 19vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.person07{
+  width: 20vw;
+  height: 42vh;
+  background: url('../img/HS/cinema/person07.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40.2vh;
+  right: 19.5vw;
+  transition: all 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}

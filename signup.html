@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>One Pick - Sign-up & Log-in</title>
+	<link rel="stylesheet" href="./css/signup.css">
+	<script src="https://kit.fontawesome.com/9fe8a3c2f4.js" crossorigin="anonymous"></script>
+	<script defer src="./js/signup.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+		<div class="signup">
+			<form action="/signup" method="POST">
+				<label for="chk" aria-hidden="true">Sign up</label>
+				<input type="text" name="name" placeholder="name" required="">
+				<input type="email" name="email" placeholder="example@kdt.com" required="">
+				<input type="password" name="pw" placeholder="password" required="">
+				<button>Sign up</button>
+			</form>
+		</div>
+
+		<div class="login">
+			<form action="/login" method="POST">
+				<label for="chk" aria-hidden="true">Login</label>
+				<input type="email" name="email" placeholder="example@kdt.com" required="">
+				<input type="password" name="pw" placeholder="password" required="">
+				<button>Login</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="header_logo" onclick="location.href='/index.html'"><i class="fa-solid fa-earth-asia"></i></div>
+		<div class="header_circle01"><a class="sg" href="/signup.html"><i class="fa-solid fa-user-plus"></i></a></div>
+		<div class="header_circle02"><a href="/community.html"><i class="fa-brands fa-rocketchat"></i></a></div>
+		<div class="header_menu"><i class="fa-solid fa-ellipsis"></i>
+		</div>
+	</div>
+	<div class="header_opened">
+		<div class="header_item01">
+			<a href="/interstellar.html">Interstellar</a>
+			<a href="/spider.html">SpiderMan : No Way Home</a>
+			<a href="/blue.html">Blue Is The Warmest Color</a>
+		</div>
+	</div>
+</body>
+
+</html>

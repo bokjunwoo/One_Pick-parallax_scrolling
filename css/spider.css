@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Carter+One&family=DM+Serif+Display:ital@1&family=Noto+Sans+KR:wght@100;300;400;500&family=Nuosu+SIL&family=Oleo+Script+Swash+Caps&family=Rock+Salt&family=Sawarabi+Gothic&family=Shadows+Into+Light&family=Song+Myung&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FONTS */
+/*font-family: 'Bodoni Moda', serif;
+font-family: 'Nanum Gothic Coding', monospace;
+//Bodoni Moda , Rock Salt,Nuosu SIL*/
+* {
+  overscroll-behavior: none !important;
+}
+
+body {
+  cursor: url(../cursor/Spiderman_cursor.cur) 2 3, url(../cursor/Spiderman_cursor.cur) 2 3, auto;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+main {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  z-index: 100;
+}
+.header:hover .header_logo {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header:hover .header_circle01, .header:hover .header_circle02 {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header:hover .header_menu {
+  color: #fff;
+  transform: translateY(0vh);
+  opacity: 1;
+}
+.header .header_logo {
+  background-image: url("../img/JW/header_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 1vw;
+  left: 7vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+}
+.header .header_circle01 {
+  font: 300 1.5vw/5 "Bodoni Moda";
+  position: absolute;
+  left: 47.2vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+  color: white;
+}
+.header .header_circle01 > a:visited {
+  color: white;
+}
+.header .header_circle02 {
+  font: 300 1.5vw/5 "Bodoni Moda";
+  position: absolute;
+  right: 47.2vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+  color: white;
+}
+.header .header_circle02 > a:visited {
+  color: white;
+}
+.header .header_menu {
+  font: 300 1.5vw/5 "Bodoni Moda";
+  position: absolute;
+  right: 7vw;
+  cursor: pointer;
+  transition: all 1s;
+  transform: translateY(-10vh);
+  opacity: 0;
+}
+
+.header_opened {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  background: url("../img/HS/background.gif");
+  display: none;
+  color: #fff;
+  z-index: 100;
+}
+.header_opened .header_item01 {
+  width: 80vw;
+  margin: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_opened .header_item01 a {
+  margin-bottom: 10vh;
+  transition: all 0.4s;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.807);
+}
+.header_opened .header_item01 a:visited {
+  color: #fff;
+}
+.header_opened .header_item01 a:nth-of-type(1) {
+  font: 900 12vh/1 "Bodoni Moda";
+  letter-spacing: 3px;
+}
+.header_opened .header_item01 a:nth-of-type(2) {
+  font: 900 9vh/1 "Rock Salt";
+}
+.header_opened .header_item01 a:nth-of-type(3) {
+  font: 900 12vh/1 "Nuosu SIL";
+}
+.header_opened .header_item01 a:hover {
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+section.section_00 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_00 .start_img {
+  display: block;
+  position: absolute;
+  width: 30vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_01 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_01 .inner {
+  width: 90%;
+  margin: auto;
+}
+section.section_01 .inner .web {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+section.section_01 .inner .web > div {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+}
+section.section_01 .inner .web > div > img {
+  display: block;
+  width: 150%;
+  height: 150%;
+  margin: 0 auto;
+}
+section.section_01 .inner .web .web_box1 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box1 > img {
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+}
+section.section_01 .inner .web .web_box1 .sm_img1 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 5vw;
+  left: 3vw;
+}
+section.section_01 .inner .web .web_box2 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box2 > img {
+  position: absolute;
+  top: -8vw;
+  left: -6vw;
+}
+section.section_01 .inner .web .web_box2 .sm_img2 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 2vw;
+  left: 2vw;
+}
+section.section_01 .inner .web .web_box3 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box3 > img {
+  position: absolute;
+  top: -3vw;
+  left: -2vw;
+}
+section.section_01 .inner .web .web_box3 .sm_img3 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 6vw;
+  left: 6vw;
+}
+section.section_01 .inner .web .web_box4 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box4 > img {
+  position: absolute;
+  top: -1vw;
+  left: -5vw;
+}
+section.section_01 .inner .web .web_box4 .sm_img4 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 8vw;
+  left: 3vw;
+}
+section.section_01 .inner .web .web_box5 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box5 > img {
+  position: absolute;
+  top: -10vw;
+  left: -1vw;
+}
+section.section_01 .inner .web .web_box5 .sm_img5 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 1vw;
+  left: 7vw;
+}
+section.section_01 .inner .web .web_box6 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box6 > img {
+  position: absolute;
+  top: -8vw;
+  left: -1vw;
+}
+section.section_01 .inner .web .web_box6 .sm_img6 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 2vw;
+  left: 6vw;
+}
+section.section_01 .inner .web .web_box7 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box7 > img {
+  position: absolute;
+  top: -12vw;
+  left: -5vw;
+}
+section.section_01 .inner .web .web_box7 .sm_img7 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: -3vw;
+  left: 3vw;
+}
+section.section_01 .inner .web .web_box8 {
+  position: relative;
+}
+section.section_01 .inner .web .web_box8 > img {
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+}
+section.section_01 .inner .web .web_box8 .sm_img8 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 5vw;
+  left: 3vw;
+}
+section.section_02 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_02 .inner {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+section.section_02 .inner .main_text_img {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.section_02 .inner .main_text_img .main_img1 {
+  width: 80%;
+  margin-left: 50%;
+  margin-bottom: 5vw;
+  transform: translateX(-50%);
+}
+section.section_02 .inner .main_text_img .main_img2 {
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+section.section_02 .inner .spider_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_02 .inner .spider_img .spider_img01 {
+  width: 20vw;
+  opacity: 0;
+}
+section.section_03 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_03 .inner {
+  width: 90%;
+  margin: auto;
+}
+section.section_03 .inner .cast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+section.section_03 .inner .cast .cast_item1:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item2:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item3:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item4:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item5:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item6:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item7:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast .cast_item8:hover > img {
+  filter: brightness(1);
+}
+section.section_03 .inner .cast > div {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+}
+section.section_03 .inner .cast > div > img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  filter: brightness(2);
+}
+section.section_03 .inner .cast > div .item_img1 {
+  filter: brightness(2.5);
+}
+section.section_03 .inner .cast > div > p {
+  border-top: 3px solid #999;
+  text-align: center;
+  font-size: 20px;
+  line-height: 70px;
+  color: #fff;
+  font-family: "Noto Sans KR";
+}
+section.section_04 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_04 .inner {
+  width: 90%;
+  margin: auto;
+}
+section.section_04 .inner .story {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+section.section_04 .inner .story > div {
+  width: 630px;
+  height: 250px;
+  margin: auto;
+  margin-top: 1vw;
+}
+section.section_04 .inner .story .story_text_01 {
+  position: relative;
+  font-size: 18px;
+  line-height: 2;
+  font-family: "Noto Sans KR";
+  color: #fff;
+}
+section.section_04 .inner .story .story_text_01 > p {
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1vw;
+}
+section.section_04 .inner .story .story_video_01 {
+  position: relative;
+}
+section.section_04 .inner .story .story_video_01 .story_video1 {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_04 .inner .story .story_text_02 {
+  position: relative;
+  font-size: 18px;
+  line-height: 2;
+  font-family: "Noto Sans KR";
+  color: #fff;
+}
+section.section_04 .inner .story .story_text_02 > p {
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1vw;
+}
+section.section_04 .inner .story .story_video_02 {
+  position: relative;
+}
+section.section_04 .inner .story .story_video_02 .story_video2 {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_04 .inner .story .story_text_03 {
+  position: relative;
+  font-size: 18px;
+  line-height: 2;
+  font-family: "Noto Sans KR";
+  color: #fff;
+}
+section.section_04 .inner .story .story_text_03 > p {
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1vw;
+}
+section.section_04 .inner .story .story_video_03 {
+  position: relative;
+}
+section.section_04 .inner .story .story_video_03 .story_video3 {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_05 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_05 .inner {
+  width: 90%;
+  margin: auto;
+}
+section.section_05 .inner .trailer_text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  font-family: "Bree Serif";
+}
+section.section_05 .inner .trailer_video {
+  width: 100%;
+}
+section.section_05 .inner .trailer_video .video_01 {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section_06 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_06 .famous_img01 {
+  position: absolute;
+  background-image: url("../img/JW/famous01.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: brightness(2);
+}
+section.section_06 .famous_img02 {
+  position: absolute;
+  background-image: url("../img/JW/famous02.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: brightness(2);
+}
+section.section_06 .famous_img03 {
+  position: absolute;
+  background-image: url("../img/JW/famous03.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: brightness(2);
+}
+section.section_06 .inner {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+section.section_06 .inner .famous_text01 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 5vw;
+  opacity: 0;
+  font-family: "Bree Serif";
+}
+section.section_06 .inner .famous_text01 > p {
+  font-size: 2vw;
+  font-family: "Noto Sans KR";
+}
+section.section_06 .inner .famous_text02 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 5vw;
+  opacity: 0;
+  font-family: "Bree Serif";
+}
+section.section_06 .inner .famous_text02 > p {
+  font-size: 2vw;
+  font-family: "Noto Sans KR";
+}
+section.section_06 .inner .famous_text03 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 5vw;
+  opacity: 0;
+  font-family: "Bree Serif";
+}
+section.section_06 .inner .famous_text03 > p {
+  font-size: 2vw;
+  font-family: "Noto Sans KR";
+}
+section.section_07 {
+  height: 100vh;
+  background-color: black;
+}
+section.section_07 .last_img {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+}
+section.section_07 .last_img .last_img1 {
+  background-image: url("../img/JW/last_spider1.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+section.section_07 .last_img .last_img2 {
+  background-image: url("../img/JW/last_spider2.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section.section_07 .last_img .last_img3 {
+  background-image: url("../img/JW/last_spider3.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*# sourceMappingURL=spider.css.map */
